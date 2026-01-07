@@ -69,6 +69,16 @@ def handle_unprocessable_entity(err):
 def swagger_json():
     return send_from_directory('.', 'swagger.json')
 
+# Serve frontend
+@app.route('/')
+def index():
+    return send_from_directory('static', 'index.html')
+
+# Serve uploaded images
+@app.route('/static/uploads/<folder>/<filename>')
+def uploaded_file(folder, filename):
+    return send_from_directory(f'static/uploads/{folder}', filename)
+
 # Swagger UI configuration
 SWAGGER_URL = '/api/docs'
 API_URL = '/swagger.json'

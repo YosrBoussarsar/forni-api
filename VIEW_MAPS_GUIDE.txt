@@ -1,0 +1,115 @@
+"""
+Quick guide to test images and maps in your browser
+"""
+
+print("=" * 70)
+print("🗺️  VIEWING BAKERIES WITH IMAGES AND MAPS")
+print("=" * 70)
+
+print("""
+STEP 1: Start the Flask API
+----------------------------
+In your terminal, run:
+    python app.py
+
+The API will start at: http://localhost:5000
+
+
+STEP 2: View the Interactive Map
+---------------------------------
+Open your web browser and go to:
+    👉 http://localhost:5000/
+
+You will see:
+✅ A main map showing all bakeries with markers
+✅ Individual bakery cards with:
+   - Images (if uploaded)
+   - Location maps for each bakery
+   - Address, rating, and details
+
+
+STEP 3: Create a Bakery with Auto-Geocoding
+--------------------------------------------
+Use the API to create a bakery (it will auto-geocode the address):
+
+curl -X POST http://localhost:5000/register \\
+  -H "Content-Type: application/json" \\
+  -d '{"email":"test@bakery.com","password":"Test1234","role":"bakery_owner"}'
+
+curl -X POST http://localhost:5000/login \\
+  -H "Content-Type: application/json" \\
+  -d '{"email":"test@bakery.com","password":"Test1234"}'
+
+# Copy the access_token from the response above, then:
+
+curl -X POST http://localhost:5000/bakery \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer YOUR_TOKEN_HERE" \\
+  -d '{
+    "name": "My Test Bakery",
+    "description": "Fresh bread daily",
+    "address": "Eiffel Tower",
+    "city": "Paris",
+    "governorate": "France",
+    "specialties": "Baguettes"
+  }'
+
+
+STEP 4: Upload an Image
+------------------------
+To upload an image for bakery ID 1:
+
+curl -X POST http://localhost:5000/bakery/1/upload-image \\
+  -H "Authorization: Bearer YOUR_TOKEN_HERE" \\
+  -F "image=@/path/to/your/image.jpg"
+
+
+STEP 5: Refresh the Browser
+----------------------------
+Go back to http://localhost:5000/ and you'll see:
+✅ Your bakery appears on the main map
+✅ A card with your uploaded image
+✅ An individual map showing the bakery location
+
+
+WHAT YOU'LL SEE
+---------------
+📍 Main Map (top):
+   - Shows all bakeries as markers
+   - Click markers for bakery info popup
+
+🏪 Bakery Cards (below):
+   - Bakery image (or colored placeholder if no image)
+   - Name, description, rating
+   - Address and location
+   - Individual interactive map for each bakery
+   - Coordinates displayed
+
+
+API FEATURES
+------------
+✅ Auto-geocoding: Addresses automatically converted to coordinates
+✅ Image storage: Local file storage (free, no cloud costs)
+✅ Interactive maps: Using OpenStreetMap (free)
+✅ Nearby search: GET /bakery/nearby?lat=48.8566&lng=2.3522&radius=5
+
+
+TROUBLESHOOTING
+---------------
+Q: I don't see images?
+A: Upload images using the /bakery/{id}/upload-image endpoint
+
+Q: I don't see maps?
+A: Make sure bakeries have addresses that can be geocoded
+   Or provide latitude/longitude manually
+
+Q: Maps not loading?
+A: Check your internet connection (maps load from OpenStreetMap)
+
+Q: "Cannot connect to API"?
+A: Make sure Flask is running: python app.py
+""")
+
+print("=" * 70)
+print("🚀 Ready! Start the API and open http://localhost:5000/")
+print("=" * 70)

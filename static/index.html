@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forni - Bakeries with Maps & Images</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .bakery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .bakery-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .bakery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .bakery-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .bakery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bakery-info {
+            padding: 20px;
+        }
+
+        .bakery-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .bakery-description {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .bakery-location {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .bakery-rating {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .bakery-map {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .no-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .upload-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        .upload-btn:hover {
+            background: #2980b9;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-badge {
+            display: inline-block;
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 0.85em;
+            color: #555;
+        }
+
+        #main-map {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .map-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥐 Forni Bakeries</h1>
+
+        <div class="map-section">
+            <h2 class="section-title">📍 All Bakeries Map</h2>
+            <div id="main-map"></div>
+        </div>
+
+        <h2 class="section-title">🏪 Bakery Directory</h2>
+        <div id="loading" class="loading">Loading bakeries...</div>
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="bakeries" class="bakery-grid"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const API_BASE = 'http://localhost:5000';
+        let mainMap;
+        let markers = [];
+
+        // Initialize main map
+        function initMainMap() {
+            // Default to world view
+            mainMap = L.map('main-map').setView([20, 0], 2);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(mainMap);
+        }
+
+        // Load and display bakeries
+        async function loadBakeries() {
+            try {
+                const response = await fetch(`${API_BASE}/bakery`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const bakeries = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                
+                if (bakeries.length === 0) {
+                    document.getElementById('bakeries').innerHTML = 
+                        '<p style="text-align: center; color: #999; padding: 40px;">No bakeries found. Create your first bakery!</p>';
+                    return;
+                }
+                
+                displayBakeries(bakeries);
+                addMarkersToMainMap(bakeries);
+                
+            } catch (error) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').textContent = 
+                    `Error loading bakeries: ${error.message}. Make sure the API is running on ${API_BASE}`;
+                console.error('Error:', error);
+            }
+        }
+
+        // Add all bakery markers to main map
+        function addMarkersToMainMap(bakeries) {
+            const validBakeries = bakeries.filter(b => b.latitude && b.longitude);
+            
+            if (validBakeries.length === 0) return;
+
+            // Clear existing markers
+            markers.forEach(marker => mainMap.removeLayer(marker));
+            markers = [];
+
+            // Add new markers
+            validBakeries.forEach(bakery => {
+                const marker = L.marker([bakery.latitude, bakery.longitude])
+                    .bindPopup(`
+                        <div style="min-width: 200px;">
+                            <h3 style="margin: 0 0 8px 0;">${bakery.name}</h3>
+                            <p style="margin: 0 0 5px 0; color: #666;">${bakery.address || 'No address'}</p>
+                            <p style="margin: 0; color: #999; font-size: 0.9em;">${bakery.city || ''}, ${bakery.governorate || ''}</p>
+                            ${bakery.rating ? `<p style="margin: 5px 0 0 0;">⭐ ${bakery.rating.toFixed(1)}/5</p>` : ''}
+                        </div>
+                    `)
+                    .addTo(mainMap);
+                
+                markers.push(marker);
+            });
+
+            // Fit map to show all markers
+            if (validBakeries.length === 1) {
+                mainMap.setView([validBakeries[0].latitude, validBakeries[0].longitude], 13);
+            } else {
+                const group = L.featureGroup(markers);
+                mainMap.fitBounds(group.getBounds().pad(0.1));
+            }
+        }
+
+        // Display bakeries as cards
+        function displayBakeries(bakeries) {
+            const container = document.getElementById('bakeries');
+            container.innerHTML = '';
+
+            bakeries.forEach(bakery => {
+                const card = createBakeryCard(bakery);
+                container.appendChild(card);
+            });
+        }
+
+        // Create individual bakery card
+        function createBakeryCard(bakery) {
+            const card = document.createElement('div');
+            card.className = 'bakery-card';
+
+            // Image section
+            let imageHtml = '';
+            if (bakery.image_url) {
+                imageHtml = `<img src="${API_BASE}${bakery.image_url}" alt="${bakery.name}" onerror="this.parentElement.innerHTML='<div class=\\'no-image\\'>No Image</div>'">`;
+            } else {
+                imageHtml = `<div class="no-image">🥖 ${bakery.name.charAt(0)}</div>`;
+            }
+
+            // Build card HTML
+            card.innerHTML = `
+                <div class="bakery-image">
+                    ${imageHtml}
+                </div>
+                <div class="bakery-info">
+                    <div class="bakery-name">${bakery.name}</div>
+                    
+                    ${bakery.rating ? `<span class="bakery-rating">⭐ ${bakery.rating.toFixed(1)}/5 (${bakery.review_count || 0} reviews)</span>` : ''}
+                    
+                    ${bakery.description ? `<p class="bakery-description">${bakery.description}</p>` : ''}
+                    
+                    <div class="bakery-location">
+                        📍 ${bakery.address || 'No address'}<br>
+                        ${bakery.city || ''}${bakery.city && bakery.governorate ? ', ' : ''}${bakery.governorate || ''}
+                    </div>
+                    
+                    ${bakery.specialties ? `<div class="info-badge">🍰 ${bakery.specialties}</div>` : ''}
+                    
+                    ${bakery.latitude && bakery.longitude ? 
+                        `<div class="bakery-map" id="map-${bakery.id}"></div>
+                         <div style="margin-top: 8px; font-size: 0.85em; color: #999;">
+                            📌 ${bakery.latitude.toFixed(4)}, ${bakery.longitude.toFixed(4)}
+                         </div>` : 
+                        '<p style="color: #e74c3c; margin-top: 10px;">⚠️ No location data</p>'
+                    }
+                </div>
+            `;
+
+            // Add individual map for this bakery
+            setTimeout(() => {
+                if (bakery.latitude && bakery.longitude) {
+                    const mapId = `map-${bakery.id}`;
+                    const mapElement = document.getElementById(mapId);
+                    
+                    if (mapElement) {
+                        const map = L.map(mapId, {
+                            zoomControl: false,
+                            scrollWheelZoom: false
+                        }).setView([bakery.latitude, bakery.longitude], 15);
+                        
+                        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '© OpenStreetMap'
+                        }).addTo(map);
+                        
+                        L.marker([bakery.latitude, bakery.longitude])
+                            .addTo(map)
+                            .bindPopup(bakery.name);
+                    }
+                }
+            }, 100);
+
+            return card;
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initMainMap();
+            loadBakeries();
+        });
+    </script>
+</body>
+</html>

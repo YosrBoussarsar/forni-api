@@ -1,0 +1,150 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                   🗺️  IMAGES & MAPS - QUICK START                   ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+TO SEE IMAGES AND MAPS FOR BAKERIES:
+=====================================
+
+1. START THE API
+   -------------
+   Run in terminal:
+   
+       python app.py
+   
+   ✅ API starts at http://localhost:5000
+
+
+2. OPEN YOUR BROWSER
+   -----------------
+   Go to:
+   
+       👉 http://localhost:5000/
+   
+   You will see:
+   ✅ Interactive map with all bakery markers
+   ✅ Bakery cards with images and individual maps
+   ✅ Real-time geocoding and image display
+
+
+3. HOW IT WORKS
+   ------------
+   
+   📍 MAPS:
+   --------
+   • When you create a bakery with an address, it auto-geocodes
+   • Latitude/longitude are stored in the database
+   • Frontend displays bakeries on OpenStreetMap
+   • Each bakery card has its own mini-map
+   
+   🖼️ IMAGES:
+   ----------
+   • Upload images via POST /bakery/{id}/upload-image
+   • Images saved to /static/uploads/bakeries/
+   • Image URLs returned and displayed automatically
+   • Same works for products and surplus bags
+
+
+4. CREATE TEST BAKERY
+   ------------------
+   
+   a) Register (if needed):
+      POST http://localhost:5000/register
+      {
+        "email": "test@test.com",
+        "password": "Test1234",
+        "role": "bakery_owner"
+      }
+   
+   b) Login to get token:
+      POST http://localhost:5000/login
+      {
+        "email": "test@test.com",
+        "password": "Test1234"
+      }
+   
+   c) Create bakery (auto-geocodes!):
+      POST http://localhost:5000/bakery
+      Headers: Authorization: Bearer YOUR_TOKEN
+      {
+        "name": "Test Bakery",
+        "address": "Times Square",
+        "city": "New York",
+        "governorate": "New York",
+        "description": "Fresh daily"
+      }
+   
+   d) Upload image:
+      POST http://localhost:5000/bakery/1/upload-image
+      Headers: Authorization: Bearer YOUR_TOKEN
+      Form-data: image = [your image file]
+   
+   e) Refresh http://localhost:5000/
+      ✅ See your bakery on the map!
+      ✅ See your image in the card!
+
+
+5. WHAT YOU'LL SEE
+   ---------------
+   
+   Main Page Layout:
+   ┌─────────────────────────────────────────────┐
+   │         🥐 Forni Bakeries                  │
+   ├─────────────────────────────────────────────┤
+   │                                             │
+   │  📍 All Bakeries Map (Interactive)         │
+   │  ╔═══════════════════════════════════════╗ │
+   │  ║   [World Map with Bakery Markers]     ║ │
+   │  ║   Click markers for info popup        ║ │
+   │  ╚═══════════════════════════════════════╝ │
+   │                                             │
+   │  🏪 Bakery Directory                       │
+   │  ┌──────────────┐ ┌──────────────┐        │
+   │  │ [Photo]      │ │ [Photo]      │        │
+   │  │ Bakery Name  │ │ Bakery Name  │        │
+   │  │ ⭐ 4.5/5     │ │ ⭐ 4.8/5     │        │
+   │  │ 📍 Location  │ │ 📍 Location  │        │
+   │  │ [Mini Map]   │ │ [Mini Map]   │        │
+   │  └──────────────┘ └──────────────┘        │
+   └─────────────────────────────────────────────┘
+
+
+6. TROUBLESHOOTING
+   ---------------
+   
+   ❌ No maps showing?
+      → Check if bakeries have latitude/longitude
+      → Addresses need to be geocodable (real places)
+      → Internet required (maps load from OpenStreetMap)
+   
+   ❌ No images showing?
+      → Upload images using the upload-image endpoint
+      → Check /static/uploads/bakeries/ folder exists
+      → Verify image_url in database
+   
+   ❌ Can't connect?
+      → Make sure Flask is running: python app.py
+      → Check http://localhost:5000 is accessible
+
+
+7. FREE SERVICES USED
+   ------------------
+   
+   ✅ Nominatim (OpenStreetMap) - Geocoding
+   ✅ OpenStreetMap - Map tiles
+   ✅ Leaflet.js - Map rendering
+   ✅ Local filesystem - Image storage
+   
+   💰 Total cost: $0.00
+
+
+SUMMARY
+=======
+1. Run: python app.py
+2. Open: http://localhost:5000/
+3. See: Maps + Images for all bakeries!
+
+For more details, see:
+• MAPS_AND_IMAGES.md - Full documentation
+• IMAGE_GEOCODING_GUIDE.md - API usage guide
+
+Enjoy! 🎉
