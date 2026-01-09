@@ -11,6 +11,8 @@ class BakeryModel(db.Model):
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text)
     address = db.Column(db.String(255))
+    phone = db.Column(db.String(50))
+    opening_hours = db.Column(db.String(100))
     city = db.Column(db.String(100))
     governorate = db.Column(db.String(100))
     latitude = db.Column(db.Float)

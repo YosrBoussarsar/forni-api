@@ -13,7 +13,7 @@ blp = Blueprint("Analytics", __name__, description="Analytics operations")
 class WastePrevented(MethodView):
     @jwt_required()
     def get(self):
-        user = UserModel.find_by_id(get_jwt_identity())
+        user = UserModel.find_by_id(int(get_jwt_identity()))
 
         if user.role not in ["bakery_owner", "admin"]:
             abort(403, message="Forbidden")

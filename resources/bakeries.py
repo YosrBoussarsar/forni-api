@@ -44,6 +44,22 @@ class Bakery(MethodView):
         return {"message": "Bakery deleted"}
 
 
+@blp.route("/bakery/my")
+class MyBakery(MethodView):
+    
+    # Get current user's bakery
+    @jwt_required()
+    @blp.response(200, BakerySchema)
+    def get(self):
+        user_id = int(get_jwt_identity())
+        bakery = BakeryModel.query.filter_by(owner_id=user_id).first()
+        
+        if not bakery:
+            abort(404, message="You don't have a bakery yet")
+        
+        return bakery
+
+
 @blp.route("/bakery")
 class BakeryList(MethodView):
 
@@ -83,7 +99,8 @@ class BakeryList(MethodView):
     @blp.arguments(BakeryCreateSchema)
     @blp.response(201, BakerySchema)
     def post(self, data):
-        user = UserModel.find_by_id(get_jwt_identity())
+        user_id = int(get_jwt_identity())
+        user = UserModel.find_by_id(user_id)
 
         if user.role not in ["bakery_owner", "admin"]:
             abort(403, message="Only bakery owners or admins can create bakeries")

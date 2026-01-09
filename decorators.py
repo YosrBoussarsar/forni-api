@@ -10,7 +10,7 @@ def admin_required():
     def decorator(fn):
         @wraps(fn)
         def wrapper(*args, **kwargs):
-            user = UserModel.find_by_id(get_jwt_identity())
+            user = UserModel.find_by_id(int(get_jwt_identity()))
             if not user or user.role != "admin":
                 abort(403, message="Admin privileges required")
             return fn(*args, **kwargs)
@@ -26,7 +26,7 @@ def owner_required(model):
     def decorator(fn):
         @wraps(fn)
         def wrapper(*args, **kwargs):
-            user = UserModel.find_by_id(get_jwt_identity())
+            user = UserModel.find_by_id(int(get_jwt_identity()))
             resource_id = kwargs.get("bakery_id") or kwargs.get("product_id") or kwargs.get("bag_id") or kwargs.get("order_id")
 
             resource = model.query.get_or_404(resource_id)
@@ -59,7 +59,7 @@ def owner_or_admin_required(model):
     def decorator(fn):
         @wraps(fn)
         def wrapper(*args, **kwargs):
-            user = UserModel.find_by_id(get_jwt_identity())
+            user = UserModel.find_by_id(int(get_jwt_identity()))
             resource_id = (
                 kwargs.get("bakery_id")
                 or kwargs.get("product_id")

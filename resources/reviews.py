@@ -21,7 +21,7 @@ class Review(MethodView):
     @blp.response(200, ReviewSchema)
     def put(self, data, review_id):
         review = ReviewModel.query.get_or_404(review_id)
-        if review.user_id != get_jwt_identity():
+        if review.user_id != int(get_jwt_identity()):
             abort(403, message="Forbidden")
 
         for field, value in data.items():
@@ -37,7 +37,7 @@ class Review(MethodView):
     @jwt_required()
     def delete(self, review_id):
         review = ReviewModel.query.get_or_404(review_id)
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
 
         if review.user_id != user_id:
             abort(403, message="Forbidden")
@@ -65,7 +65,7 @@ class ReviewList(MethodView):
     def post(self, data):
         order = OrderModel.query.get_or_404(data["order_id"])
 
-        if order.user_id != get_jwt_identity():
+        if order.user_id != int(get_jwt_identity()):
             abort(403, message="Forbidden")
 
         if order.status != "completed":

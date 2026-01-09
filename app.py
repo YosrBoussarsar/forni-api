@@ -55,13 +55,18 @@ db.init_app(app)
 migrate.init_app(app, db)
 api = Api(app)
 jwt = JWTManager(app)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # Add error handler for better debugging
 @app.errorhandler(422)
 def handle_unprocessable_entity(err):
     # Get validation errors from flask-smorest
     exc = err.data.get("errors", {})
+    print("=" * 50)
+    print("422 VALIDATION ERROR:")
+    print(f"Errors: {exc}")
+    print(f"Full error data: {err.data}")
+    print("=" * 50)
     return {"errors": exc, "message": "Validation failed"}, 422
 
 # Serve swagger.json
@@ -95,6 +100,31 @@ def check_if_token_in_blacklist(jwt_header, jwt_payload):
     jti = jwt_payload['jti']
     token = TokenBlacklist.query.filter_by(jti=jti).first()
     return token is not None
+
+# JWT error handlers
+@jwt.expired_token_loader
+def expired_token_callback(jwt_header, jwt_payload):
+    return {"message": "Token has expired", "error": "token_expired"}, 401
+
+@jwt.invalid_token_loader
+def invalid_token_callback(error):
+    print("=" * 50)
+    print("INVALID TOKEN ERROR:")
+    print(f"Error: {error}")
+    print("=" * 50)
+    return {"message": "Invalid token", "error": "invalid_token", "details": str(error)}, 401
+
+@jwt.unauthorized_loader
+def missing_token_callback(error):
+    print("=" * 50)
+    print("MISSING TOKEN ERROR:")
+    print(f"Error: {error}")
+    print("=" * 50)
+    return {"message": "Authorization token is missing", "error": "authorization_required"}, 401
+
+@jwt.revoked_token_loader
+def revoked_token_callback(jwt_header, jwt_payload):
+    return {"message": "Token has been revoked", "error": "token_revoked"}, 401
 
 # Register blueprints
 api.register_blueprint(AuthBlueprint)

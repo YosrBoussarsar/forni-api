@@ -31,7 +31,7 @@ class Recommendations(MethodView):
         - Bags still available and active
         """
 
-        user_id = get_jwt_identity()
+        user_id = int(get_jwt_identity())
         user = UserModel.find_by_id(user_id)
 
         if not user:

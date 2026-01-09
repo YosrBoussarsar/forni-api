@@ -40,7 +40,7 @@ class OrderList(MethodView):
     @jwt_required()
     @blp.response(200, OrderSchema(many=True))
     def get(self):
-        user = UserModel.find_by_id(get_jwt_identity())
+        user = UserModel.find_by_id(int(get_jwt_identity()))
 
         if user.role == "customer":
             return OrderModel.query.filter_by(user_id=user.id).all()
@@ -72,7 +72,7 @@ class OrderList(MethodView):
         
         # Create the order
         order = OrderModel(
-            user_id=get_jwt_identity(),
+            user_id=int(get_jwt_identity()),
             bakery_id=bakery_id,
             total_price=0,
             status="pending",

@@ -41,7 +41,7 @@ class UserProfile(MethodView):
     @blp.arguments(UserUpdateSchema)
     @blp.response(200, UserSchema)
     def put(self, data):
-        user = UserModel.find_by_id(get_jwt_identity())
+        user = UserModel.find_by_id(int(get_jwt_identity()))
         if not user:
             abort(404, message="User not found")
 
