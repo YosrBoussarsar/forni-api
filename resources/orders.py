@@ -1,6 +1,7 @@
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required, get_jwt_identity
+from datetime import datetime
 from db import db
 from models.order import OrderModel
 from models.order_item import OrderItemModel
@@ -40,6 +41,8 @@ class OrderList(MethodView):
     @jwt_required()
     @blp.response(200, OrderSchema(many=True))
     def get(self):
+        # Add version marker to confirm new code is loaded
+        print("ORDER GET - VERSION 2.0", flush=True)
         user = UserModel.find_by_id(int(get_jwt_identity()))
 
         if user.role == "customer":
@@ -53,96 +56,129 @@ class OrderList(MethodView):
         return OrderModel.query.all()
 
     @jwt_required()
-    @blp.arguments(OrderCreateSchema)
-    @blp.response(201, OrderSchema)
-    def post(self, data):
-        # Debug: Print received data
-        print("=" * 50)
-        print("RECEIVED ORDER DATA:")
-        print(f"Type: {type(data)}")
-        print(f"Data: {data}")
-        print("=" * 50)
-        
-        # Validate that all items belong to the same bakery
-        bakery_id = data["bakery_id"]
-        items_data = data["items"]
-        
-        if not items_data:
-            abort(400, message="Order must contain at least one item")
-        
-        # Create the order
-        order = OrderModel(
-            user_id=int(get_jwt_identity()),
-            bakery_id=bakery_id,
-            total_price=0,
-            status="pending",
-            pickup_time=data.get("pickup_time"),
-            payment_intent_id=data.get("payment_intent_id")
-        )
-        
-        total_price = 0
-        
-        # Process each item
-        for item_data in items_data:
-            quantity = item_data["quantity"]
+    def post(self):
+        """Create a new order - VERSION 2.0"""
+        print("\n" + "="*60, flush=True)
+        print("ORDER POST - VERSION 2.0 - STARTED", flush=True)
+        print("="*60, flush=True)
+        try:
+            # Get request data
+            from flask import request
+            data = request.get_json()
             
-            if "product_id" in item_data and item_data["product_id"]:
-                # Handle product order
-                product = ProductModel.query.get_or_404(item_data["product_id"])
+            if not data:
+                return {"error": "No JSON data provided"}, 400
+            
+            # Get current user
+            user_id = int(get_jwt_identity())
+            
+            # Extract data
+            bakery_id = data.get("bakery_id")
+            items_data = data.get("items", [])
+            
+            if not bakery_id:
+                return {"error": "bakery_id is required"}, 400
+            
+            if not items_data:
+                return {"error": "Order must contain at least one item"}, 400
+            
+            # Parse pickup_time if provided
+            pickup_time = None
+            if data.get("pickup_time"):
+                try:
+                    pickup_time_str = data.get("pickup_time").replace('Z', '+00:00')
+                    pickup_time = datetime.fromisoformat(pickup_time_str)
+                except Exception as e:
+                    return {"error": f"Invalid pickup_time format: {str(e)}"}, 400
+            
+            # Create the order
+            order = OrderModel(
+                user_id=user_id,
+                bakery_id=bakery_id,
+                total_price=0,
+                status="pending",
+                pickup_time=pickup_time,
+                payment_intent_id=data.get("payment_intent_id")
+            )
+            
+            total_price = 0
+            
+            # Process each item
+            for item_data in items_data:
+                quantity = item_data["quantity"]
                 
-                if product.bakery_id != bakery_id:
-                    abort(400, message=f"Product {product.name} does not belong to the specified bakery")
-                
-                if not product.is_available:
-                    abort(400, message=f"Product {product.name} is not available")
-                
-                unit_price = float(product.price)
-                subtotal = unit_price * quantity
-                
-                order_item = OrderItemModel(
-                    product_id=product.id,
-                    quantity=quantity,
-                    unit_price=unit_price,
-                    subtotal=subtotal
-                )
-                order.order_items.append(order_item)
-                total_price += subtotal
-                
-            elif "surplus_bag_id" in item_data and item_data["surplus_bag_id"]:
-                # Handle surplus bag order
-                bag = SurplusBagModel.query.get_or_404(item_data["surplus_bag_id"])
-                
-                if bag.bakery_id != bakery_id:
-                    abort(400, message=f"Surplus bag {bag.title} does not belong to the specified bakery")
-                
-                if bag.quantity_available < quantity:
-                    abort(400, message=f"Not enough {bag.title} available. Only {bag.quantity_available} left")
-                
-                unit_price = float(bag.sale_price)
-                subtotal = unit_price * quantity
-                
-                order_item = OrderItemModel(
-                    surplus_bag_id=bag.id,
-                    quantity=quantity,
-                    unit_price=unit_price,
-                    subtotal=subtotal
-                )
-                order.order_items.append(order_item)
-                
-                # Reduce available quantity
-                bag.quantity_available -= quantity
-                
-                # For backward compatibility: if only one surplus bag, set it as the main surplus_bag_id
-                if len(items_data) == 1:
-                    order.surplus_bag_id = bag.id
-                
-                total_price += subtotal
-            else:
-                abort(400, message="Each item must have either product_id or surplus_bag_id")
-        
-        order.total_price = total_price
-        
-        db.session.add(order)
-        db.session.commit()
-
-        return order
+                if "product_id" in item_data and item_data["product_id"]:
+                    # Handle product order
+                    product = ProductModel.query.get(item_data["product_id"])
+                    if not product:
+                        return {"error": f"Product {item_data['product_id']} not found"}, 404
+                    
+                    if product.bakery_id != bakery_id:
+                        return {"error": f"Product {product.name} does not belong to bakery {bakery_id}"}, 400
+                    
+                    if not product.is_available:
+                        return {"error": f"Product {product.name} is not available"}, 400
+                    
+                    unit_price = float(product.price)
+                    subtotal = unit_price * quantity
+                    
+                    order_item = OrderItemModel(
+                        product_id=product.id,
+                        quantity=quantity,
+                        unit_price=unit_price,
+                        subtotal=subtotal
+                    )
+                    order.order_items.append(order_item)
+                    total_price += subtotal
+                    
+                elif "surplus_bag_id" in item_data and item_data["surplus_bag_id"]:
+                    # Handle surplus bag order
+                    bag = SurplusBagModel.query.get(item_data["surplus_bag_id"])
+                    if not bag:
+                        return {"error": f"Surplus bag {item_data['surplus_bag_id']} not found"}, 404
+                    
+                    if bag.bakery_id != bakery_id:
+                        return {"error": f"Surplus bag {bag.title} does not belong to bakery {bakery_id}"}, 400
+                    
+                    if bag.quantity_available < quantity:
+                        return {"error": f"Not enough {bag.title} available. Only {bag.quantity_available} left"}, 400
+                    
+                    unit_price = float(bag.sale_price)
+                    subtotal = unit_price * quantity
+                    
+                    order_item = OrderItemModel(
+                        surplus_bag_id=bag.id,
+                        quantity=quantity,
+                        unit_price=unit_price,
+                        subtotal=subtotal
+                    )
+                    order.order_items.append(order_item)
+                    bag.quantity_available -= quantity
+                    
+                    if len(items_data) == 1:
+                        order.surplus_bag_id = bag.id
+                    
+                    total_price += subtotal
+                else:
+                    return {"error": "Each item must have either product_id or surplus_bag_id"}, 400
+            
+            order.total_price = total_price
+            
+            # Save to database
+            db.session.add(order)
+            db.session.commit()
+            
+            # Return success response
+            from schemas import OrderSchema
+            schema = OrderSchema()
+            return schema.dump(order), 201
+            
+        except Exception as e:
+            db.session.rollback()
+            import traceback
+            error_details = {
+                "error": str(e),
+                "type": type(e).__name__,
+                "traceback": traceback.format_exc()
+            }
+            return error_details, 500

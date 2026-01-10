@@ -1,5 +1,5 @@
 ﻿import os
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, request
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_swagger_ui import get_swaggerui_blueprint
@@ -57,17 +57,89 @@ api = Api(app)
 jwt = JWTManager(app)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
+# Log all requests
+@app.before_request
+def log_request():
+    import sys
+    import json
+    
+    # Write to file
+    with open('requests.log', 'a') as f:
+        f.write(f"\n>>> {request.method} {request.path}\n")
+        if request.is_json:
+            f.write(f"Body: {json.dumps(request.get_json(), indent=2)}\n")
+    
+    msg = f"\n>>> Incoming {request.method} request to {request.path}"
+    print(msg, flush=True)
+    sys.stdout.flush()
+    if request.method == "POST" and request.is_json:
+        data_msg = f">>> Request body: {request.get_json()}"
+        print(data_msg, flush=True)
+        sys.stdout.flush()
+    print("", flush=True)
+
 # Add error handler for better debugging
 @app.errorhandler(422)
 def handle_unprocessable_entity(err):
     # Get validation errors from flask-smorest
     exc = err.data.get("errors", {})
-    print("=" * 50)
-    print("422 VALIDATION ERROR:")
-    print(f"Errors: {exc}")
-    print(f"Full error data: {err.data}")
-    print("=" * 50)
+    with open('validation_errors.log', 'a') as f:
+        import json
+        f.write("\n" + "="*60 + "\n")
+        f.write("422 VALIDATION ERROR\n")
+        f.write(f"Errors: {json.dumps(exc, indent=2)}\n")
+        f.write(f"Full error data: {json.dumps(err.data, indent=2)}\n")
+        f.write("="*60 + "\n")
+    print("=" * 50, flush=True)
+    print("422 VALIDATION ERROR:", flush=True)
+    print(f"Errors: {exc}", flush=True)
+    print(f"Full error data: {err.data}", flush=True)
+    print("=" * 50, flush=True)
     return {"errors": exc, "message": "Validation failed"}, 422
+
+@app.errorhandler(500)
+def handle_internal_server_error(err):
+    with open('500_errors.log', 'a') as f:
+        import traceback
+        f.write("\n" + "="*60 + "\n")
+        f.write("500 INTERNAL SERVER ERROR\n")
+        f.write(f"Error: {err}\n")
+        f.write(traceback.format_exc())
+        f.write("="*60 + "\n")
+    print("=" * 50, flush=True)
+    print("500 INTERNAL SERVER ERROR:", flush=True)
+    print(f"Error: {err}", flush=True)
+    import traceback
+    traceback.print_exc()
+    print("=" * 50, flush=True)
+    return {"message": "Internal server error", "error": str(err)}, 500
+
+@app.errorhandler(Exception)
+def handle_exception(err):
+    with open('exceptions.log', 'a') as f:
+        import traceback
+        f.write("\n" + "="*60 + "\n")
+        f.write("UNHANDLED EXCEPTION\n")
+        f.write(f"Error: {err}\n")
+        f.write(traceback.format_exc())
+        f.write("="*60 + "\n")
+    print("=" * 50, flush=True)
+    print("UNHANDLED EXCEPTION:", flush=True)
+    print(f"Error: {err}", flush=True)
+    import traceback
+    traceback.print_exc()
+    print("=" * 50, flush=True)
+    return {"message": "An error occurred", "error": str(err)}, 500
+
+# Test endpoint to verify logging works
+@app.route('/test', methods=['GET', 'POST'])
+def test_endpoint():
+    print("\n" + "="*60)
+    print("TEST ENDPOINT HIT!")
+    print(f"Method: {request.method}")
+    print(f"Data: {request.get_json() if request.is_json else 'No JSON'}")
+    print("="*60 + "\n")
+    return {"status": "ok", "message": "Test endpoint working"}
 
 # Serve swagger.json
 @app.route('/swagger.json')
@@ -138,6 +210,16 @@ api.register_blueprint(RecommendationsBlueprint)
 api.register_blueprint(AnalyticsBlueprint)
 
 if __name__ == '__main__':
+    import sys
+    # Disable output buffering
+    sys.stdout.reconfigure(line_buffering=True)
+    sys.stderr.reconfigure(line_buffering=True)
+    
     with app.app_context():
         db.create_all()
+    
+    print("\n" + "="*60)
+    print("FLASK SERVER STARTING - LOGGING ENABLED")
+    print("="*60 + "\n")
+    
     app.run(debug=True, host='0.0.0.0', port=5000)
