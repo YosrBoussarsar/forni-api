@@ -14,6 +14,7 @@ class ProductModel(db.Model):
     allergens = db.Column(db.String(255))
     tags = db.Column(db.String(500))  # e.g., "croissant,pastry,breakfast"
     is_available = db.Column(db.Boolean, default=True)
+    quantity_available = db.Column(db.Integer)  # Optional inventory tracking
     image_url = db.Column(db.String(500))  # NEW FIELD
 
     created_at = db.Column(db.DateTime, default=datetime.utcnow)

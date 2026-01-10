@@ -6,7 +6,7 @@ from db import db
 from models.bakery import BakeryModel
 from models.user import UserModel
 from models.product import ProductModel
-from schemas import BakerySchema, BakeryCreateSchema, BakeryUpdateSchema
+from schemas import BakerySchema, BakeryDetailSchema, BakeryCreateSchema, BakeryUpdateSchema
 from decorators import owner_or_admin_required
 import math
 
@@ -15,8 +15,8 @@ blp = Blueprint("Bakeries",__name__,description="Operations on bakeries")
 @blp.route("/bakery/<int:bakery_id>")
 class Bakery(MethodView):
 
-    # PUBLIC: Get bakery by ID
-    @blp.response(200, BakerySchema)
+    # PUBLIC: Get bakery by ID with products and surplus bags
+    @blp.response(200, BakeryDetailSchema)
     def get(self, bakery_id):
         return BakeryModel.query.get_or_404(bakery_id)
 
@@ -47,9 +47,9 @@ class Bakery(MethodView):
 @blp.route("/bakery/my")
 class MyBakery(MethodView):
     
-    # Get current user's bakery
+    # Get current user's bakery with products and surplus bags
     @jwt_required()
-    @blp.response(200, BakerySchema)
+    @blp.response(200, BakeryDetailSchema)
     def get(self):
         user_id = int(get_jwt_identity())
         bakery = BakeryModel.query.filter_by(owner_id=user_id).first()

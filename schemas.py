@@ -1,4 +1,4 @@
-from marshmallow import Schema, fields, validates, ValidationError, pre_load, EXCLUDE
+from marshmallow import Schema, fields, validates, ValidationError, pre_load, post_dump, EXCLUDE
 import re
 
 # ============================================================
@@ -118,6 +118,11 @@ class BakerySchema(PlainBakerySchema):
     specialties = fields.Str()
     review_count = fields.Int(dump_only=True)
     created_at = fields.DateTime(dump_only=True)
+    # Removed products and surplus_bags to prevent loading all items
+
+
+class BakeryDetailSchema(BakerySchema):
+    """Extended schema with products and surplus bags for detail view"""
     products = fields.List(fields.Nested(lambda: PlainProductSchema()), dump_only=True)
     surplus_bags = fields.List(fields.Nested(lambda: PlainSurplusBagSchema()), dump_only=True)
 
@@ -134,6 +139,7 @@ class PlainProductSchema(Schema):
     allergens = fields.Str()
     tags = fields.Str()
     is_available = fields.Bool()
+    quantity_available = fields.Int()
     image_url = fields.Str()
 
 
@@ -146,6 +152,7 @@ class ProductCreateSchema(Schema):
     allergens = fields.Str()
     tags = fields.Str()
     is_available = fields.Bool()
+    quantity_available = fields.Int()  # Optional - for bakeries that want to track inventory
     image_url = fields.Str()
 
 
@@ -157,6 +164,7 @@ class ProductUpdateSchema(Schema):
     allergens = fields.Str()
     tags = fields.Str()
     is_available = fields.Bool()
+    quantity_available = fields.Int()
     image_url = fields.Str()
 
 
@@ -183,6 +191,26 @@ class PlainSurplusBagSchema(Schema):
     pickup_start = fields.DateTime()
     pickup_end = fields.DateTime()
 
+    @post_dump
+    def add_frontend_fields(self, data, **kwargs):
+        """Add frontend-friendly field names"""
+        # Add original_price as alias for original_value
+        if "original_value" in data:
+            data["original_price"] = data["original_value"]
+        
+        # Add quantity as alias for quantity_available
+        if "quantity_available" in data:
+            data["quantity"] = data["quantity_available"]
+        
+        # Convert pickup_start and pickup_end to pickup_time string
+        if "pickup_start" in data and "pickup_end" in data:
+            if data["pickup_start"] and data["pickup_end"]:
+                start_time = data["pickup_start"].strftime("%H:%M") if hasattr(data["pickup_start"], 'strftime') else str(data["pickup_start"])
+                end_time = data["pickup_end"].strftime("%H:%M") if hasattr(data["pickup_end"], 'strftime') else str(data["pickup_end"])
+                data["pickup_time"] = f"{start_time}-{end_time}"
+        
+        return data
+
 
 class SurplusBagCreateSchema(Schema):
     bakery_id = fields.Int(required=True)
@@ -197,6 +225,47 @@ class SurplusBagCreateSchema(Schema):
     pickup_end = fields.DateTime(required=True)
     image_url = fields.Str()
 
+    @pre_load
+    def map_field_names(self, data, **kwargs):
+        """Map alternative field names from frontend"""
+        from datetime import datetime, timedelta
+        
+        # Map original_price to original_value
+        if "original_price" in data and "original_value" not in data:
+            data["original_value"] = data.pop("original_price")
+        
+        # Map quantity to quantity_available
+        if "quantity" in data and "quantity_available" not in data:
+            data["quantity_available"] = data.pop("quantity")
+        
+        # Parse pickup_time range (e.g., "11:00-12:00") into pickup_start and pickup_end
+        if "pickup_time" in data and "pickup_start" not in data:
+            pickup_time_str = data.pop("pickup_time")
+            if isinstance(pickup_time_str, str) and '-' in pickup_time_str:
+                # Parse time range like "11:00-12:00"
+                try:
+                    start_time, end_time = pickup_time_str.split('-')
+                    today = datetime.now().date()
+                    
+                    # Parse start time
+                    start_hour, start_min = map(int, start_time.strip().split(':'))
+                    data["pickup_start"] = datetime.combine(today, datetime.min.time().replace(hour=start_hour, minute=start_min))
+                    
+                    # Parse end time
+                    end_hour, end_min = map(int, end_time.strip().split(':'))
+                    data["pickup_end"] = datetime.combine(today, datetime.min.time().replace(hour=end_hour, minute=end_min))
+                except:
+                    # If parsing fails, use current time and add 2 hours
+                    data["pickup_start"] = datetime.now()
+                    data["pickup_end"] = datetime.now() + timedelta(hours=2)
+            else:
+                # If it's a datetime object, use it as pickup_start
+                data["pickup_start"] = pickup_time_str
+                if "pickup_end" not in data:
+                    data["pickup_end"] = pickup_time_str
+        
+        return data
+
 
 class SurplusBagUpdateSchema(Schema):
     title = fields.Str()
@@ -210,6 +279,41 @@ class SurplusBagUpdateSchema(Schema):
     pickup_start = fields.DateTime()
     pickup_end = fields.DateTime()
     image_url = fields.Str()
+
+    @pre_load
+    def map_field_names(self, data, **kwargs):
+        """Map alternative field names from frontend"""
+        from datetime import datetime, timedelta
+        
+        # Map original_price to original_value
+        if "original_price" in data and "original_value" not in data:
+            data["original_value"] = data.pop("original_price")
+        
+        # Map quantity to quantity_available
+        if "quantity" in data and "quantity_available" not in data:
+            data["quantity_available"] = data.pop("quantity")
+        
+        # Parse pickup_time range (e.g., "11:00-12:00") into pickup_start and pickup_end
+        if "pickup_time" in data and "pickup_start" not in data:
+            pickup_time_str = data.pop("pickup_time")
+            if isinstance(pickup_time_str, str) and '-' in pickup_time_str:
+                # Parse time range like "11:00-12:00"
+                try:
+                    start_time, end_time = pickup_time_str.split('-')
+                    today = datetime.now().date()
+                    
+                    # Parse start time
+                    start_hour, start_min = map(int, start_time.strip().split(':'))
+                    data["pickup_start"] = datetime.combine(today, datetime.min.time().replace(hour=start_hour, minute=start_min))
+                    
+                    # Parse end time
+                    end_hour, end_min = map(int, end_time.strip().split(':'))
+                    data["pickup_end"] = datetime.combine(today, datetime.min.time().replace(hour=end_hour, minute=end_min))
+                except:
+                    # If parsing fails, keep original values if they exist
+                    pass
+        
+        return data
 
 
 class SurplusBagSchema(PlainSurplusBagSchema):

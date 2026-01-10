@@ -14,15 +14,15 @@ blp = Blueprint("SurplusBags", __name__, description="Operations on surplus bags
 @blp.route("/surplus_bag/<int:surplus_bag_id>")
 class SurplusBag(MethodView):
     @blp.response(200, SurplusBagSchema)
-    def get(self, bag_id):
-        return SurplusBagModel.query.get_or_404(bag_id)
+    def get(self, surplus_bag_id):
+        return SurplusBagModel.query.get_or_404(surplus_bag_id)
 
     @jwt_required()
     @owner_or_admin_required(SurplusBagModel)
     @blp.arguments(SurplusBagUpdateSchema)
     @blp.response(200, SurplusBagSchema)
-    def put(self, data, bag_id):
-        bag = SurplusBagModel.query.get_or_404(bag_id)
+    def put(self, data, surplus_bag_id):
+        bag = SurplusBagModel.query.get_or_404(surplus_bag_id)
         for field, value in data.items():
             setattr(bag, field, value)
         db.session.commit()
@@ -30,8 +30,8 @@ class SurplusBag(MethodView):
 
     @jwt_required()
     @owner_or_admin_required(SurplusBagModel)
-    def delete(self, bag_id):
-        bag = SurplusBagModel.query.get_or_404(bag_id)
+    def delete(self, surplus_bag_id):
+        bag = SurplusBagModel.query.get_or_404(surplus_bag_id)
         db.session.delete(bag)
         db.session.commit()
         return {"message": "Surplus bag deleted"}
@@ -42,15 +42,25 @@ class SurplusBagList(MethodView):
     @blp.response(200, SurplusBagSchema(many=True))
     def get(self):
         """
-        Get all surplus bags with optional tag filtering
-        Query params: tags (comma-separated, e.g., ?tags=sweet,savory)
+        Get all surplus bags with optional filtering
+        Query params: 
+        - bakery_id: filter by bakery
+        - tags: comma-separated tags (e.g., ?tags=sweet,savory)
         """
+        bakery_id = request.args.get('bakery_id', type=int)
         tags_param = request.args.get('tags')
         
+        # Start with base query
+        query = SurplusBagModel.query
+        
+        # Filter by bakery if specified
+        if bakery_id:
+            query = query.filter_by(bakery_id=bakery_id)
+        
+        # Filter by tags if specified
         if tags_param:
-            # Split tags and filter surplus bags
             search_tags = [tag.strip().lower() for tag in tags_param.split(',')]
-            bags = SurplusBagModel.query.all()
+            bags = query.all()
             
             # Filter bags that contain any of the search tags
             filtered_bags = []
@@ -62,7 +72,7 @@ class SurplusBagList(MethodView):
             
             return filtered_bags
         
-        return SurplusBagModel.query.all()
+        return query.all()
 
     @jwt_required()
     @blp.arguments(SurplusBagCreateSchema)
