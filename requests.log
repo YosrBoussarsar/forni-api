@@ -1734,3 +1734,8061 @@ Body: {
 >>> GET /review
 
 >>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 1,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 2
+    }
+  ],
+  "pickup_time": "2026-01-13T19:00:24.438Z",
+  "payment_intent_id": "mock_pi_1768323624438"
+}
+
+>>> OPTIONS /surplus_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 1,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 1
+    }
+  ],
+  "pickup_time": "2026-01-13T19:00:41.981Z",
+  "payment_intent_id": "mock_pi_1768323641981"
+}
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/2
+
+>>> GET /review
+
+>>> GET /bakery/2
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /recommendation
+
+>>> GET /recommendation
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/2
+
+>>> GET /review
+
+>>> GET /bakery/2
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /bakery/undefined
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/17
+
+>>> OPTIONS /review
+
+>>> GET /bakery/17
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/2
+
+>>> GET /review
+
+>>> GET /bakery/2
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/4
+
+>>> GET /review
+
+>>> GET /bakery/4
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 4,
+  "items": [
+    {
+      "quantity": 1,
+      "product_id": 15
+    }
+  ],
+  "pickup_time": "2026-01-13T20:03:53.017Z",
+  "payment_intent_id": "mock_pi_1768327433017"
+}
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 1,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 2
+    }
+  ],
+  "pickup_time": "2026-01-13T20:04:18.965Z",
+  "payment_intent_id": "mock_pi_1768327458965"
+}
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 1,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 2
+    }
+  ],
+  "pickup_time": "2026-01-13T20:04:40.602Z",
+  "payment_intent_id": "mock_pi_1768327480602"
+}
+
+>>> OPTIONS /recommendation
+
+>>> GET /recommendation
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+ew
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 1,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 2
+    },
+    {
+      "quantity": 1,
+      "surplus_bag_id": 1
+    }
+  ],
+  "pickup_time": "2026-01-13T21:22:42.876Z",
+  "payment_intent_id": "mock_pi_1768332162876"
+}
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 1,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 1
+    }
+  ],
+  "pickup_time": "2026-01-13T21:22:49.323Z",
+  "payment_intent_id": "mock_pi_1768332169323"
+}
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> OPTIONS /recommendation
+
+>>> GET /recommendation
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> OPTIONS /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> POST /order
+Body: {
+  "bakery_id": 18,
+  "items": [
+    {
+      "quantity": 1,
+      "surplus_bag_id": 26
+    }
+  ],
+  "pickup_time": "2026-01-13T21:44:56.712Z",
+  "payment_intent_id": "mock_pi_1768333496712"
+}
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /order
+
+>>> OPTIONS /order/11/complete
+
+>>> OPTIONS /order/11/complete
+
+>>> OPTIONS /order/11/complete
+
+>>> OPTIONS /order/11/complete
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order/11/complete
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> OPTIONS /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> GET /order
+
+>>> OPTIONS /order/11/complete
+
+>>> PATCH /order/11/complete
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> OPTIONS /surplus_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /review
+
+>>> GET /bakery
+
+>>> GET /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /surplus_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /recommendation
+
+>>> GET /recommendation
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+_bag
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> OPTIONS /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /product/recommendations
+
+>>> GET /product/recommendations
+
+>>> OPTIONS /product
+
+>>> POST /product
+Body: {
+  "name": "Russe pistache",
+  "description": "",
+  "price": 6,
+  "is_available": true,
+  "tags": "sweet,cake,pistachio,nuts",
+  "image_url": "https://kiwiadour.com/wp-content/uploads/2023/12/gateau-russe.jpg",
+  "bakery_id": 18
+}
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /review
+
+>>> OPTIONS /order
+
+>>> GET /bakery/18
+
+>>> GET /order
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> OPTIONS /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /surplus_bag
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> OPTIONS /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /product/74
+
+>>> PUT /product/74
+Body: {
+  "name": "Macaron Box (6)",
+  "description": "",
+  "price": 20,
+  "is_available": true,
+  "tags": "macaron,dessert,french,sweet",
+  "image_url": "https://www.onamangepourvous.tn/wp-content/uploads/2023/03/00000000000000.jpg"
+}
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /product/73
+
+>>> PUT /product/73
+Body: {
+  "name": "\u00c9clair",
+  "description": "",
+  "price": 6,
+  "is_available": true,
+  "tags": "pastry,dessert,chocolate,french",
+  "image_url": "https://gourmandise.com.tn/344-large_default/eclair-cafe.jpg"
+}
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /product/75
+
+>>> PUT /product/75
+Body: {
+  "name": "Mille-feuille",
+  "description": "",
+  "price": 7,
+  "is_available": true,
+  "tags": "pastry,dessert,french,premium",
+  "image_url": "https://gourmandise.com.tn/238-large_default/millefeuille-fondant.jpg"
+}
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /product
+
+>>> GET /product
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /review
+
+>>> OPTIONS /order
+
+>>> GET /review
+
+>>> GET /bakery/18
+
+>>> GET /order
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /order
+
+>>> GET /bakery/18
+
+>>> GET /review
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> GET /surplus_bag
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery
+
+>>> GET /review
+
+>>> GET /bakery
+
+>>> GET /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /order
+
+>>> OPTIONS /bakery/18
+
+>>> GET /review
+
+>>> GET /order
+
+>>> GET /bakery/18
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /recommendation
+
+>>> GET /recommendation
+
+>>> OPTIONS /surplus_bag
+
+>>> OPTIONS /order
+
+>>> GET /surplus_bag
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "sana.test@forni.tn",
+  "password": "Sana123!"
+}
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /order
+
+>>> OPTIONS /review
+
+>>> GET /order
+
+>>> GET /review
+
+>>> OPTIONS /bakery/my
+
+>>> GET /bakery/my
+
+>>> OPTIONS /bakery/18
+
+>>> PUT /bakery/18
+Body: {
+  "name": "Gourmandise",
+  "description": "specialit\u00e9s tunisiennes et gateaux",
+  "address": "khezama, sousse",
+  "phone": "+21658774422",
+  "opening_hours": "08:00-00:00",
+  "image_url": "https://wefranchiz.com/wp-content/uploads/2023/05/SP.jpg.webp"
+}
+
+>>> OPTIONS /login
+
+>>> POST /login
+Body: {
+  "email": "aziz@forni.tn",
+  "password": "Aziz123!"
+}
+
+>>> OPTIONS /order
+
+>>> GET /order
+
+>>> OPTIONS /bakery
+
+>>> GET /bakery
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> OPTIONS /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> GET /review
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /review
+
+>>> OPTIONS /order
+
+>>> GET /bakery/18
+
+>>> GET /review
+
+>>> GET /order
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /review
+
+>>> OPTIONS /order
+
+>>> GET /bakery/18
+
+>>> GET /review
+
+>>> GET /order
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /review
+
+>>> OPTIONS /order
+
+>>> GET /bakery/18
+
+>>> GET /review
+
+>>> GET /order
+
+>>> OPTIONS /review
+
+>>> OPTIONS /bakery/18
+
+>>> OPTIONS /order
+
+>>> GET /review
+
+>>> GET /order
+
+>>> GET /bakery/18

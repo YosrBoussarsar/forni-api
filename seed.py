@@ -101,7 +101,8 @@ with app.app_context():
         address="123 Rue de Paris",
         city="Tunis",
         owner_id=owner.id,
-        description="Fresh French-style bread and pastries"
+        description="Fresh French-style bread and pastries",
+        image_url="https://images.unsplash.com/photo-1519864600265-abb23847ef2c"
     )
 
     bakery2 = BakeryModel(
@@ -109,7 +110,8 @@ with app.app_context():
         address="45 Avenue Habib Bourguiba",
         city="Tunis",
         owner_id=owner.id,
-        description="Cupcakes, cookies, and artisan desserts"
+        description="Cupcakes, cookies, and artisan desserts",
+        image_url="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
     )
 
     bakery3 = BakeryModel(
@@ -117,7 +119,8 @@ with app.app_context():
         address="78 Rue de Marseille",
         city="Tunis",
         owner_id=owner.id,
-        description="Traditional artisan breads and sourdough"
+        description="Traditional artisan breads and sourdough",
+        image_url="https://images.unsplash.com/photo-1464306076886-debede6bbf94"
     )
 
     bakery4 = BakeryModel(
@@ -223,11 +226,11 @@ with app.app_context():
     print("Creating products...")
     products = [
         # Bakery 1 - La Baguette Dorée
-        ProductModel(name="Croissant", price=2.5, bakery_id=bakery1.id, tags="croissant,pastry,breakfast,french"),
-        ProductModel(name="Pain au Chocolat", price=3.0, bakery_id=bakery1.id, tags="pastry,chocolate,breakfast,french"),
-        ProductModel(name="Baguette", price=1.5, bakery_id=bakery1.id, tags="bread,baguette,french"),
-        ProductModel(name="Éclair", price=4.0, bakery_id=bakery1.id, tags="pastry,dessert,chocolate,french"),
-        ProductModel(name="Macaron Box (6)", price=12.0, bakery_id=bakery1.id, tags="macaron,dessert,french,sweet"),
+        ProductModel(name="Croissant", price=2.5, bakery_id=bakery1.id, tags="croissant,pastry,breakfast,french", image_url="https://images.unsplash.com/photo-1502741338009-cac2772e18bc"),
+        ProductModel(name="Pain au Chocolat", price=3.0, bakery_id=bakery1.id, tags="pastry,chocolate,breakfast,french", image_url="https://images.unsplash.com/photo-1519864600265-abb23847ef2c"),
+        ProductModel(name="Baguette", price=1.5, bakery_id=bakery1.id, tags="bread,baguette,french", image_url="https://images.unsplash.com/photo-1504674900247-0877df9cc836"),
+        ProductModel(name="Éclair", price=4.0, bakery_id=bakery1.id, tags="pastry,dessert,chocolate,french", image_url="https://images.unsplash.com/photo-1464306076886-debede6bbf94"),
+        ProductModel(name="Macaron Box (6)", price=12.0, bakery_id=bakery1.id, tags="macaron,dessert,french,sweet", image_url="https://images.unsplash.com/photo-1505250463726-0d238b6b09b0"),
         
         # Bakery 2 - Sweet Crumbs
         ProductModel(name="Chocolate Cake Slice", price=4.0, bakery_id=bakery2.id, tags="cake,chocolate,dessert,sweet"),

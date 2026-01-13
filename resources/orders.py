@@ -1,3 +1,4 @@
+
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from flask_jwt_extended import jwt_required, get_jwt_identity
@@ -12,6 +13,18 @@ from schemas import OrderSchema, OrderCreateSchema, OrderStatusSchema
 from decorators import owner_or_admin_required
 
 blp = Blueprint("Orders", __name__, description="Operations on orders")
+
+@blp.route("/order/<int:order_id>/complete")
+class OrderComplete(MethodView):
+    @jwt_required()
+    @owner_or_admin_required(OrderModel)
+    def patch(self, order_id):
+        order = OrderModel.query.get_or_404(order_id)
+        if order.status == "completed":
+            return {"message": "Order is already completed."}, 400
+        order.status = "completed"
+        db.session.commit()
+        return {"message": "Order marked as completed.", "order_id": order.id, "status": order.status}
 
 @blp.route("/order/<int:order_id>")
 class Order(MethodView):

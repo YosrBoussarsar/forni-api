@@ -1,0 +1,96 @@
+
+============================================================
+500 INTERNAL SERVER ERROR
+Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\core.py", line 437, in parse
+    data = self._process_location_data(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\core.py", line 391, in _process_location_data
+    data = schema.load(preprocessed_data, **load_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\marshmallow\schema.py", line 730, in load
+    return self._do_load(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\marshmallow\schema.py", line 938, in _do_load
+    raise exc
+marshmallow.exceptions.ValidationError: {'phone': ['Unknown field.'], 'opening_hours': ['Unknown field.']}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\views.py", line 110, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\views.py", line 191, in dispatch_request
+    return current_app.ensure_sync(meth)(**kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask_jwt_extended\view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\decorators.py", line 83, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\core.py", line 640, in wrapper
+    parsed_args = self.parse(
+                  ^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\core.py", line 441, in parse
+    self._on_validation_error(
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\core.py", line 267, in _on_validation_error
+    error_handler(
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\flaskparser.py", line 125, in handle_error
+    abort(
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\flaskparser.py", line 48, in abort
+    raise err
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\webargs\flaskparser.py", line 44, in abort
+    flask.abort(http_status_code)
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\helpers.py", line 291, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\werkzeug\exceptions.py", line 887, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.UnprocessableEntity: 422 Unprocessable Entity: The request was well-formed but was unable to be followed due to semantic errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\app.py", line 802, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\venv\Lib\site-packages\flask\app.py", line 777, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\forni-api\app.py", line 91, in handle_unprocessable_entity
+    f.write(f"Full error data: {json.dumps(err.data, indent=2)}\n")
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type BakeryUpdateSchema is not JSON serializable
+============================================================

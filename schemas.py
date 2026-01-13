@@ -172,7 +172,7 @@ class ProductSchema(PlainProductSchema):
     bakery_id = fields.Int(required=True, load_only=True)
     description = fields.Str()
     created_at = fields.DateTime(dump_only=True)
-    bakery = fields.Nested(PlainBakerySchema(), dump_only=True)
+    bakery = fields.Nested(BakerySchema(), dump_only=True)
 
 
 # ============================================================
