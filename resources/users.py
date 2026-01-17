@@ -37,6 +37,7 @@ class UserProfile(MethodView):
             traceback.print_exc()
             raise
 
+
     @jwt_required()
     @blp.arguments(UserUpdateSchema)
     @blp.response(200, UserSchema)
@@ -48,13 +49,20 @@ class UserProfile(MethodView):
         user.first_name = data.get("first_name", user.first_name)
         user.last_name = data.get("last_name", user.last_name)
         user.phone = data.get("phone", user.phone)
-        
         # Update location if provided
         if "latitude" in data:
             user.latitude = data["latitude"]
         if "longitude" in data:
             user.longitude = data["longitude"]
-
         db.session.commit()
         return user
+
+    @jwt_required()
+    def delete(self):
+        user = UserModel.find_by_id(int(get_jwt_identity()))
+        if not user:
+            abort(404, message="User not found")
+        db.session.delete(user)
+        db.session.commit()
+        return {"message": "User profile deleted"}, 200
 

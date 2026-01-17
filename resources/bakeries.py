@@ -71,27 +71,26 @@ class BakeryList(MethodView):
         Query params: product_tags (comma-separated, e.g., ?product_tags=croissant,bread)
         """
         tags_param = request.args.get('product_tags')
-        
+        name_param = request.args.get('name')
+        if name_param:
+            # Search bakeries by name (case-insensitive, partial match)
+            return BakeryModel.query.filter(BakeryModel.name.ilike(f"%{name_param}%")).all()
         if tags_param:
             # Split tags and find bakeries with matching products
             search_tags = [tag.strip().lower() for tag in tags_param.split(',')]
-            
             # Find all products with matching tags
             products = ProductModel.query.all()
             bakery_ids = set()
-            
             for product in products:
                 if product.tags:
                     product_tags = [tag.strip().lower() for tag in product.tags.split(',')]
                     if any(tag in product_tags for tag in search_tags):
                         bakery_ids.add(product.bakery_id)
-            
             # Get bakeries with matching products
             if bakery_ids:
                 return BakeryModel.query.filter(BakeryModel.id.in_(bakery_ids)).all()
             else:
                 return []
-        
         return BakeryModel.query.all()
 
     # OWNER or ADMIN: Create bakery

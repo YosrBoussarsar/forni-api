@@ -50,19 +50,20 @@ class ProductList(MethodView):
         """
         bakery_id = request.args.get('bakery_id', type=int)
         tags_param = request.args.get('tags')
-        
+        name_param = request.args.get('name')
         # Start with base query
         query = ProductModel.query
-        
         # Filter by bakery if specified
         if bakery_id:
             query = query.filter_by(bakery_id=bakery_id)
-        
+        # Filter by name if specified
+        if name_param:
+            query = query.filter(ProductModel.name.ilike(f"%{name_param}%"))
+            return query.all()
         # Filter by tags if specified
         if tags_param:
             search_tags = [tag.strip().lower() for tag in tags_param.split(',')]
             products = query.all()
-            
             # Filter products that contain any of the search tags
             filtered_products = []
             for product in products:
@@ -70,9 +71,7 @@ class ProductList(MethodView):
                     product_tags = [tag.strip().lower() for tag in product.tags.split(',')]
                     if any(tag in product_tags for tag in search_tags):
                         filtered_products.append(product)
-            
             return filtered_products
-        
         return query.all()
 
     @jwt_required()

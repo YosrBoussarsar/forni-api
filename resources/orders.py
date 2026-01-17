@@ -41,6 +41,14 @@ class Order(MethodView):
 
     @jwt_required()
     @owner_or_admin_required(OrderModel)
+    def delete(self, order_id):
+        order = OrderModel.query.get_or_404(order_id)
+        db.session.delete(order)
+        db.session.commit()
+        return {"message": "Order deleted"}, 200
+
+    @jwt_required()
+    @owner_or_admin_required(OrderModel)
     @blp.arguments(OrderStatusSchema)
     def put(self, data, order_id):
         order = OrderModel.query.get_or_404(order_id)
@@ -62,8 +70,8 @@ class OrderList(MethodView):
             return OrderModel.query.filter_by(user_id=user.id).all()
 
         if user.role == "bakery_owner":
-            return OrderModel.query.join(SurplusBagModel).filter(
-                SurplusBagModel.bakery_id.in_([b.id for b in user.bakeries])
+            return OrderModel.query.filter(
+                OrderModel.bakery_id.in_([b.id for b in user.bakeries])
             ).all()
 
         return OrderModel.query.all()

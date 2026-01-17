@@ -9,7 +9,7 @@ class SurplusBagModel(db.Model):
 
     title = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text)
-    category = db.Column(db.String(50))
+    # category field removed
     tags = db.Column(db.String(500))  # e.g., "sweet,savory,vegan"
     image_url = db.Column(db.String(500))  # NEW FIELD
 
@@ -20,7 +20,7 @@ class SurplusBagModel(db.Model):
     pickup_start = db.Column(db.DateTime, nullable=False)
     pickup_end = db.Column(db.DateTime, nullable=False)
 
-    status = db.Column(db.String(20), default="active")
+    # status field removed
 
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
